@@ -8,12 +8,12 @@
    ============================================ */
 :root {
   /* Colores de Marca (Constantes) */
-  --brand-primary: #FFD60A;
-  --brand-secondary: #000000;
-  --brand-tertiary: #FFFDE7;
-  --brand-green: #19C267;
-  --brand-dark-gray: #262B31;
-  --brand-light-gray: #E8E8E8;
+  --primary: #FFD60A;
+  --secondary: #000000;
+  --tertiary: #FFFDE7;
+  --green: #19C267;
+  --dark-gray: #262B31;
+  --light-gray: #E8E8E8;
 
   /* Backgrounds y Textos Principales */
 
@@ -155,12 +155,12 @@
    ============================================ */
 @theme inline {
   /* Colores de Marca */
-  --color-brand-primary: var(--brand-primary);
-  --color-brand-secondary: var(--brand-secondary);
-  --color-brand-tertiary: var(--brand-tertiary);
-  --color-brand-green: var(--brand-green);
-  --color-brand-dark-gray: var(--brand-dark-gray);
-  --color-brand-light-gray: var(--brand-light-gray);
+  --color-primary: var(--primary);
+  --color-secondary: var(--secondary);
+  --color-tertiary: var(--tertiary);
+  --color-green: var(--green);
+  --color-dark-gray: var(--dark-gray);
+  --color-light-gray: var(--light-gray);
 
   /* Backgrounds y Textos */
   --color-background: var(--background);
