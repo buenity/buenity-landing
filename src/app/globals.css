@@ -1,0 +1,258 @@
+@import "tailwindcss";
+@import "tw-animate-css";
+
+@custom-variant dark (&:is(.dark *));
+
+/* ============================================
+   VARIABLES CSS - TEMA CLARO (Default)
+   ============================================ */
+:root {
+  /* Colores de Marca (Constantes) */
+  --brand-primary: #FFD60A;
+  --brand-secondary: #000000;
+  --brand-tertiary: #FFFDE7;
+  --brand-green: #19C267;
+  --brand-dark-gray: #262B31;
+  --brand-light-gray: #E8E8E8;
+
+  /* Backgrounds y Textos Principales */
+
+  /* UI Component Colors */
+  --bg: #E8E8E8;
+  --fg: #262B31;
+  --card: oklch(1 0 0);
+  --card-fg: #262B31;
+  --popover: oklch(1 0 0);
+  --popover-fg: #262B31;
+  --muted: oklch(0.97 0 0);
+  --muted-fg: #747474;
+
+  /* Text Colors - Jerarquía */
+  --text-primary: #262B31;
+  --text-secondary: #4b5563;
+  --text-tertiary: #6b7280;
+  --text-muted: #9ca3af;
+  --text-inverse: #ffffff;
+  --text-link: #F84715;
+  --text-link-hover: #d63a0f;
+  --text-placeholder: #9ca3af;
+
+  /* Utility & Form Colors */
+  --border: oklch(0.922 0 0);
+  --input: oklch(0.922 0 0);
+  --ring: oklch(0.708 0 0);
+  --accent: oklch(0.97 0 0);
+  --accent-fg: #262B31;
+
+  /* Sidebar & Navigation */
+  --sidebar-bg: #ffffff;
+  --sidebar-fg: #262B31;
+  --sidebar-primary: oklch(0.205 0 0);
+  --sidebar-primary-fg: #ffffff;
+  --sidebar-accent: oklch(0.97 0 0);
+  --sidebar-accent-fg: #FFD60A;
+  --sidebar-border: oklch(0.922 0 0);
+  --sidebar-ring: oklch(0.708 0 0);
+
+  /* Status & Feedback Colors */
+  --destructive: oklch(0.577 0.245 27.325);
+  --destructive-fg: #ffffff;
+  --error: #F72C16;
+  --error-fg: #ffffff;
+  --success: #19C267;
+  --success-fg: #ffffff;
+  --warning: #F4BF3B;
+  --warning-fg: #000000;
+  --info: #E8E8E8;
+  --info-fg: #262B31;
+  --radius: 0.625rem;
+  --background: oklch(1 0 0);
+  --foreground: oklch(0.145 0 0);
+  --card-foreground: oklch(0.145 0 0);
+  --popover-foreground: oklch(0.145 0 0);
+  --primary: oklch(0.205 0 0);
+  --primary-foreground: oklch(0.985 0 0);
+  --secondary: oklch(0.97 0 0);
+  --secondary-foreground: oklch(0.205 0 0);
+  --muted-foreground: oklch(0.556 0 0);
+  --accent-foreground: oklch(0.205 0 0);
+  --chart-1: oklch(0.646 0.222 41.116);
+  --chart-2: oklch(0.6 0.118 184.704);
+  --chart-3: oklch(0.398 0.07 227.392);
+  --chart-4: oklch(0.828 0.189 84.429);
+  --chart-5: oklch(0.769 0.188 70.08);
+  --sidebar: oklch(0.985 0 0);
+  --sidebar-foreground: oklch(0.145 0 0);
+  --sidebar-primary-foreground: oklch(0.985 0 0);
+  --sidebar-accent-foreground: oklch(0.205 0 0);
+}
+
+/* ============================================
+   VARIABLES CSS - TEMA OSCURO
+   ============================================ */
+.dark {
+  /* Backgrounds y Textos Principales */
+  --background: oklch(0.145 0 0);
+  --foreground: oklch(0.985 0 0);
+
+  /* UI Component Colors */
+  --bg: #262B31;
+  --fg: #E8E8E8;
+  --card: oklch(0.205 0 0);
+  --card-fg: #ffffff;
+  --popover: oklch(0.205 0 0);
+  --popover-fg: #ffffff;
+  --muted: oklch(0.269 0 0);
+  --muted-fg: #aeaeae;
+
+  /* Text Colors - Jerarquía */
+  --text-primary: #ffffff;
+  --text-secondary: #d1d5db;
+  --text-tertiary: #9ca3af;
+  --text-muted: #6b7280;
+  --text-inverse: #262B31;
+  --text-link: #f96c44;
+  --text-link-hover: #fb9173;
+  --text-placeholder: #6b7280;
+
+  /* Utility & Form Colors */
+  --border: oklch(1 0 0 / 10%);
+  --input: oklch(1 0 0 / 15%);
+  --ring: oklch(0.556 0 0);
+  --accent: oklch(0.269 0 0);
+  --accent-fg: #f6f6f6;
+
+  /* Sidebar & Navigation */
+  --sidebar-bg: #2d333a;
+  --sidebar-fg: #ffffff;
+  --sidebar-accent: oklch(0.269 0 0);
+  --sidebar-accent-fg: #fb9173;
+  --sidebar-border: oklch(1 0 0 / 10%);
+  --card-foreground: oklch(0.985 0 0);
+  --popover-foreground: oklch(0.985 0 0);
+  --primary: oklch(0.922 0 0);
+  --primary-foreground: oklch(0.205 0 0);
+  --secondary: oklch(0.269 0 0);
+  --secondary-foreground: oklch(0.985 0 0);
+  --muted-foreground: oklch(0.708 0 0);
+  --accent-foreground: oklch(0.985 0 0);
+  --destructive: oklch(0.704 0.191 22.216);
+  --chart-1: oklch(0.488 0.243 264.376);
+  --chart-2: oklch(0.696 0.17 162.48);
+  --chart-3: oklch(0.769 0.188 70.08);
+  --chart-4: oklch(0.627 0.265 303.9);
+  --chart-5: oklch(0.645 0.246 16.439);
+  --sidebar: oklch(0.205 0 0);
+  --sidebar-foreground: oklch(0.985 0 0);
+  --sidebar-primary: oklch(0.488 0.243 264.376);
+  --sidebar-primary-foreground: oklch(0.985 0 0);
+  --sidebar-accent-foreground: oklch(0.985 0 0);
+  --sidebar-ring: oklch(0.556 0 0);
+}
+
+/* ============================================
+   CONFIGURACIÓN DE TAILWIND v4
+   ============================================ */
+@theme inline {
+  /* Colores de Marca */
+  --color-brand-primary: var(--brand-primary);
+  --color-brand-secondary: var(--brand-secondary);
+  --color-brand-tertiary: var(--brand-tertiary);
+  --color-brand-green: var(--brand-green);
+  --color-brand-dark-gray: var(--brand-dark-gray);
+  --color-brand-light-gray: var(--brand-light-gray);
+
+  /* Backgrounds y Textos */
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-bg: var(--bg);
+  --color-fg: var(--fg);
+
+  /* UI Components */
+  --color-card: var(--card);
+  --color-card-fg: var(--card-fg);
+  --color-popover: var(--popover);
+  --color-popover-fg: var(--popover-fg);
+  --color-muted: var(--muted);
+  --color-muted-fg: var(--muted-fg);
+
+  /* Text Colors */
+  --color-text-primary: var(--text-primary);
+  --color-text-secondary: var(--text-secondary);
+  --color-text-tertiary: var(--text-tertiary);
+  --color-text-muted: var(--text-muted);
+  --color-text-inverse: var(--text-inverse);
+  --color-text-link: var(--text-link);
+  --color-text-link-hover: var(--text-link-hover);
+  --color-text-placeholder: var(--text-placeholder);
+
+  /* Utility & Form */
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+  --color-accent: var(--accent);
+  --color-accent-fg: var(--accent-fg);
+
+  /* Sidebar */
+  --color-sidebar-bg: var(--sidebar-bg);
+  --color-sidebar-fg: var(--sidebar-fg);
+  --color-sidebar-primary: var(--sidebar-primary);
+  --color-sidebar-primary-fg: var(--sidebar-primary-fg);
+  --color-sidebar-accent: var(--sidebar-accent);
+  --color-sidebar-accent-fg: var(--sidebar-accent-fg);
+  --color-sidebar-border: var(--sidebar-border);
+  --color-sidebar-ring: var(--sidebar-ring);
+
+  /* Status Colors */
+  --color-destructive: var(--destructive);
+  --color-destructive-fg: var(--destructive-fg);
+  --color-error: var(--error);
+  --color-error-fg: var(--error-fg);
+  --color-success: var(--success);
+  --color-success-fg: var(--success-fg);
+  --color-warning: var(--warning);
+  --color-warning-fg: var(--warning-fg);
+  --color-info: var(--info);
+  --color-info-fg: var(--info-fg);
+
+  /* Fuentes */
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+  --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
+  --color-sidebar-primary-foreground: var(--sidebar-primary-foreground);
+  --color-sidebar-foreground: var(--sidebar-foreground);
+  --color-sidebar: var(--sidebar);
+  --color-chart-5: var(--chart-5);
+  --color-chart-4: var(--chart-4);
+  --color-chart-3: var(--chart-3);
+  --color-chart-2: var(--chart-2);
+  --color-chart-1: var(--chart-1);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-secondary: var(--secondary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-primary: var(--primary);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-card-foreground: var(--card-foreground);
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
+  --radius-2xl: calc(var(--radius) + 8px);
+  --radius-3xl: calc(var(--radius) + 12px);
+  --radius-4xl: calc(var(--radius) + 16px);
+}
+
+/* ============================================
+   ESTILOS GLOBALES
+   ============================================ */
+
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+}
