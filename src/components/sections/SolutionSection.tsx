@@ -1,4 +1,6 @@
 import { Card, CardContent } from "@/components/ui/card";
+import { Title } from "@/components/ui/title";
+import { Paragraph } from "@/components/ui/paragraph";
 import { QrCode, Eye, Grid3x3, Camera, ShoppingCart, Palette } from "lucide-react";
 
 export function SolutionSection() {
@@ -39,16 +41,16 @@ export function SolutionSection() {
     <section className="py-20 px-4">
       <div className="mx-auto max-w-6xl space-y-12">
         <div className="text-center space-y-4">
-          <h2 className="text-3xl font-bold text-text-primary sm:text-4xl md:text-5xl">
+          <Title as="h2" size="h2" align="center" variant="default">
             La solución
-          </h2>
-          <p className="mx-auto max-w-2xl text-lg text-text-secondary sm:text-xl">
+          </Title>
+          <Paragraph size="base" align="center" className="mx-auto max-w-2xl">
             Buenity es tu menú digital profesional.
             <br />
-            <span className="font-medium text-text-primary">
+            <span className="font-medium text-primary-text">
               Un solo link y un QR donde tus clientes pueden:
             </span>
-          </p>
+          </Paragraph>
         </div>
 
         <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
@@ -62,9 +64,9 @@ export function SolutionSection() {
                       <div className="rounded-full bg-primary/10 p-2">
                         <Icon className="size-5 text-primary" />
                       </div>
-                      <h3 className="font-semibold text-text-primary">{feature.title}</h3>
+                      <h3 className="font-semibold text-primary-text">{feature.title}</h3>
                     </div>
-                    <p className="text-sm text-text-secondary">{feature.description}</p>
+                    <Paragraph size="sm" variant="secondary">{feature.description}</Paragraph>
                   </div>
                 </CardContent>
               </Card>
@@ -73,9 +75,9 @@ export function SolutionSection() {
         </div>
 
         <div className="text-center">
-          <p className="text-lg font-medium text-text-primary sm:text-xl">
+          <Paragraph size="lg" align="center" weight="medium" variant="primary">
             Todo con el diseño y los colores de tu restaurante.
-          </p>
+          </Paragraph>
         </div>
       </div>
     </section>

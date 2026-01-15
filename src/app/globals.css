@@ -28,14 +28,14 @@
   --muted-fg: #747474;
 
   /* Text Colors - Jerarquía */
-  --text-primary: #262B31;
-  --text-secondary: #4b5563;
-  --text-tertiary: #6b7280;
-  --text-muted: #9ca3af;
-  --text-inverse: #ffffff;
-  --text-link: #F84715;
-  --text-link-hover: #d63a0f;
-  --text-placeholder: #9ca3af;
+  --primary-text: #262B31;
+  --secondary-text: #4b5563;
+  --tertiary-text: #6b7280;
+  --muted-text: #9ca3af;
+  --inverse-text: #ffffff;
+  --link-text: #F84715;
+  --link-text-hover: #d63a0f;
+  --placeholder-text: #9ca3af;
 
   /* Utility & Form Colors */
   --border: oklch(0.922 0 0);
@@ -50,7 +50,7 @@
   --sidebar-primary: oklch(0.205 0 0);
   --sidebar-primary-fg: #ffffff;
   --sidebar-accent: oklch(0.97 0 0);
-  --sidebar-accent-fg: #FFD60A;
+  --sidebar-accent-fg: var(--primary);
   --sidebar-border: oklch(0.922 0 0);
   --sidebar-ring: oklch(0.708 0 0);
 
@@ -59,20 +59,20 @@
   --destructive-fg: #ffffff;
   --error: #F72C16;
   --error-fg: #ffffff;
-  --success: #19C267;
+  --success: var(--green);
   --success-fg: #ffffff;
   --warning: #F4BF3B;
   --warning-fg: #000000;
-  --info: #E8E8E8;
-  --info-fg: #262B31;
+  --info: var(--light-gray);
+  --info-fg: var(--dark-gray);
   --radius: 0.625rem;
   --background: oklch(1 0 0);
   --foreground: oklch(0.145 0 0);
   --card-foreground: oklch(0.145 0 0);
   --popover-foreground: oklch(0.145 0 0);
-  --primary: oklch(0.205 0 0);
+  --ui-primary: oklch(0.205 0 0);
   --primary-foreground: oklch(0.985 0 0);
-  --secondary: oklch(0.97 0 0);
+  --ui-secondary: oklch(0.97 0 0);
   --secondary-foreground: oklch(0.205 0 0);
   --muted-foreground: oklch(0.556 0 0);
   --accent-foreground: oklch(0.205 0 0);
@@ -106,14 +106,14 @@
   --muted-fg: #aeaeae;
 
   /* Text Colors - Jerarquía */
-  --text-primary: #ffffff;
-  --text-secondary: #d1d5db;
-  --text-tertiary: #9ca3af;
-  --text-muted: #6b7280;
-  --text-inverse: #262B31;
-  --text-link: #f96c44;
-  --text-link-hover: #fb9173;
-  --text-placeholder: #6b7280;
+  --primary-text: #ffffff;
+  --secondary-text: #d1d5db;
+  --tertiary-text: #9ca3af;
+  --muted-text: #6b7280;
+  --inverse-text: #262B31;
+  --link-text: #f96c44;
+  --link-text-hover: #fb9173;
+  --placeholder-text: #6b7280;
 
   /* Utility & Form Colors */
   --border: oklch(1 0 0 / 10%);
@@ -130,9 +130,9 @@
   --sidebar-border: oklch(1 0 0 / 10%);
   --card-foreground: oklch(0.985 0 0);
   --popover-foreground: oklch(0.985 0 0);
-  --primary: oklch(0.922 0 0);
+  --ui-primary: oklch(0.922 0 0);
   --primary-foreground: oklch(0.205 0 0);
-  --secondary: oklch(0.269 0 0);
+  --ui-secondary: oklch(0.269 0 0);
   --secondary-foreground: oklch(0.985 0 0);
   --muted-foreground: oklch(0.708 0 0);
   --accent-foreground: oklch(0.985 0 0);
@@ -177,14 +177,14 @@
   --color-muted-fg: var(--muted-fg);
 
   /* Text Colors */
-  --color-text-primary: var(--text-primary);
-  --color-text-secondary: var(--text-secondary);
-  --color-text-tertiary: var(--text-tertiary);
-  --color-text-muted: var(--text-muted);
-  --color-text-inverse: var(--text-inverse);
-  --color-text-link: var(--text-link);
-  --color-text-link-hover: var(--text-link-hover);
-  --color-text-placeholder: var(--text-placeholder);
+  --color-primary-text: var(--primary-text);
+  --color-secondary-text: var(--secondary-text);
+  --color-tertiary-text: var(--tertiary-text);
+  --color-muted-text: var(--muted-text);
+  --color-inverse-text: var(--inverse-text);
+  --color-link-text: var(--link-text);
+  --color-link-text-hover: var(--link-text-hover);
+  --color-placeholder-text: var(--placeholder-text);
 
   /* Utility & Form */
   --color-border: var(--border);

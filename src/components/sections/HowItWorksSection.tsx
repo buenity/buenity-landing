@@ -1,5 +1,7 @@
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
+import { Title } from "@/components/ui/title";
+import { Paragraph } from "@/components/ui/paragraph";
 import { Store, Upload, QrCode } from "lucide-react";
 
 export function HowItWorksSection() {
@@ -25,15 +27,15 @@ export function HowItWorksSection() {
   ];
 
   return (
-    <section className="bg-muted py-20 px-4">
+    <section id="como-funciona" className="bg-muted py-20 px-4">
       <div className="mx-auto max-w-5xl space-y-12">
         <div className="text-center space-y-4">
-          <h2 className="text-3xl font-bold text-text-primary sm:text-4xl md:text-5xl">
+          <Title as="h2" size="h2" align="center" variant="default">
             Cómo funciona
-          </h2>
-          <p className="text-lg text-text-secondary sm:text-xl">
+          </Title>
+          <Paragraph size="base" align="center" variant="secondary">
             Eso es todo. Tus clientes ya pueden ver tu carta digital.
-          </p>
+          </Paragraph>
         </div>
 
         <div className="grid gap-8 sm:grid-cols-3">
@@ -47,7 +49,7 @@ export function HowItWorksSection() {
                       <div className="rounded-full bg-primary/10 p-2">
                         <Icon className="size-5 text-primary" />
                       </div>
-                      <CardTitle className="text-xl text-text-primary">{step.title}</CardTitle>
+                      <CardTitle className="text-xl text-primary-text">{step.title}</CardTitle>
                     </div>
                     <Badge variant="default" className="text-lg font-bold">
                       {step.number}
@@ -55,7 +57,7 @@ export function HowItWorksSection() {
                   </div>
                 </CardHeader>
                 <CardContent>
-                  <p className="text-text-secondary leading-relaxed">{step.description}</p>
+                  <Paragraph variant="secondary">{step.description}</Paragraph>
                 </CardContent>
               </Card>
             );

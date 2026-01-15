@@ -1,4 +1,6 @@
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+import { Title } from "@/components/ui/title";
+import { Paragraph } from "@/components/ui/paragraph";
 import { FileEdit, Smartphone, Palette, TrendingUp } from "lucide-react";
 
 export function BenefitsSection() {
@@ -26,12 +28,12 @@ export function BenefitsSection() {
     ];
 
     return (
-        <section className="bg-muted py-20 px-4">
+        <section id="beneficios" className="bg-muted py-20 px-4">
             <div className="mx-auto max-w-6xl space-y-12">
                 <div className="text-center space-y-4">
-                    <h2 className="text-3xl font-bold text-text-primary sm:text-4xl md:text-5xl">
+                    <Title as="h2" size="h2" align="center" variant="default">
                         Beneficios claros
-                    </h2>
+                    </Title>
                 </div>
 
                 <div className="grid gap-8 sm:grid-cols-2">
@@ -44,11 +46,11 @@ export function BenefitsSection() {
                                         <div className="rounded-full bg-primary/10 p-3">
                                             <Icon className="size-6 text-primary" />
                                         </div>
-                                        <CardTitle className="text-xl text-text-primary">{benefit.title}</CardTitle>
+                                        <CardTitle className="text-xl text-primary-text">{benefit.title}</CardTitle>
                                     </div>
                                 </CardHeader>
                                 <CardContent>
-                                    <p className="text-text-secondary leading-relaxed">{benefit.description}</p>
+                                    <Paragraph variant="secondary">{benefit.description}</Paragraph>
                                 </CardContent>
                             </Card>
                         );

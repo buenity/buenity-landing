@@ -7,12 +7,12 @@ import { HowItWorksSection } from "@/components/sections/HowItWorksSection";
 import { FutureSection } from "@/components/sections/FutureSection";
 import { CTASection } from "@/components/sections/CTASection";
 import { TruthSection } from "@/components/sections/TruthSection";
-import { ThemeToggle } from "@/components/my/ThemeToggle";
+import { BuenityNavbar } from "@/components/layout/ResizableNavbar";
 
 export default function Home() {
   return (
     <div className="min-h-screen bg-background">
-      <ThemeToggle />
+      <BuenityNavbar />
       <HeroSection />
       <ProblemSection />
       <SolutionSection />

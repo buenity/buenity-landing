@@ -1,4 +1,6 @@
 import { Card, CardContent } from "@/components/ui/card";
+import { Title } from "@/components/ui/title";
+import { Paragraph } from "@/components/ui/paragraph";
 import { X, FileText, Image, Palette, DollarSign } from "lucide-react";
 
 export function ProblemSection() {
@@ -35,15 +37,15 @@ export function ProblemSection() {
     <section className="bg-muted py-20 px-4">
       <div className="mx-auto max-w-6xl space-y-12">
         <div className="text-center space-y-4">
-          <h2 className="text-3xl font-bold text-text-primary sm:text-4xl md:text-5xl">
+          <Title as="h2" size="h2" align="center" variant="default">
             El problema real
-            <span className="block text-text-secondary text-2xl sm:text-3xl md:text-4xl mt-2">
+            <span className="block text-secondary-text text-2xl sm:text-3xl md:text-4xl mt-2 font-normal">
               (lo que sí duele)
             </span>
-          </h2>
-          <p className="text-lg text-text-secondary sm:text-xl">
+          </Title>
+          <Paragraph size="base" align="center" variant="secondary">
             Hoy la mayoría de restaurantes tienen:
-          </p>
+          </Paragraph>
         </div>
 
         <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
@@ -57,9 +59,9 @@ export function ProblemSection() {
                       <div className="rounded-full bg-destructive/10 p-2">
                         <Icon className="size-5 text-destructive" />
                       </div>
-                      <h3 className="font-semibold text-text-primary">{problem.title}</h3>
+                      <h3 className="font-semibold text-primary-text">{problem.title}</h3>
                     </div>
-                    <p className="text-sm text-text-secondary">{problem.description}</p>
+                    <Paragraph size="sm" variant="secondary">{problem.description}</Paragraph>
                   </div>
                 </CardContent>
               </Card>
@@ -68,12 +70,12 @@ export function ProblemSection() {
         </div>
 
         <div className="rounded-lg border-2 border-destructive/30 bg-destructive/5 p-6">
-          <p className="mb-4 text-center font-semibold text-text-primary">
+          <Paragraph size="base" align="center" weight="semibold" variant="primary" className="mb-4">
             Eso se traduce en:
-          </p>
+          </Paragraph>
           <ul className="flex flex-col items-center gap-3 sm:flex-row sm:justify-center">
             {consequences.map((consequence, index) => (
-              <li key={index} className="flex items-center gap-2 text-text-secondary">
+              <li key={index} className="flex items-center gap-2 text-secondary-text">
                 <X className="size-5 text-destructive" />
                 <span>{consequence}</span>
               </li>
