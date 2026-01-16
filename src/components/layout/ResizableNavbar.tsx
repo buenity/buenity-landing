@@ -34,12 +34,22 @@ export function BuenityNavbar() {
     return (
         <Navbar>
             {/* Desktop Navigation */}
-            <NavBody>
+            <NavBody className="justify-between gap-4">
                 <NavbarLogo />
                 <NavItems items={navItems} />
-                <div className="flex items-center gap-4">
-                    <NavbarButton variant="secondary">Iniciar sesión</NavbarButton>
-                    <NavbarButton variant="primary">Crear mi menú</NavbarButton>
+                <div className="flex items-center gap-2">
+                    <NavbarButton
+                        href="https://app.buenity.com/auth/login"
+                        variant="secondary"
+                    >
+                        Iniciar sesión
+                    </NavbarButton>
+                    <NavbarButton
+                        href="https://app.buenity.com/auth/register"
+                        variant="primary"
+                    >
+                        Probar gratis
+                    </NavbarButton>
                 </div>
             </NavBody>
 
@@ -69,6 +79,7 @@ export function BuenityNavbar() {
                     ))}
                     <div className="flex w-full flex-col gap-4">
                         <NavbarButton
+                            href="https://app.buenity.com/auth/login"
                             onClick={() => setIsMobileMenuOpen(false)}
                             variant="secondary"
                             className="w-full"
@@ -76,11 +87,12 @@ export function BuenityNavbar() {
                             Iniciar sesión
                         </NavbarButton>
                         <NavbarButton
+                            href="https://app.buenity.com/auth/register"
                             onClick={() => setIsMobileMenuOpen(false)}
                             variant="primary"
                             className="w-full"
                         >
-                            Crear mi menú
+                            Probar gratis
                         </NavbarButton>
                     </div>
                 </MobileNavMenu>

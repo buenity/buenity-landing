@@ -31,13 +31,17 @@ export function HeroSection() {
 
 
                 <div className="flex flex-col items-center justify-center gap-4 sm:flex-row">
-                    <Button size="lg" className="w-full sm:w-auto">
-                        <Sparkles className="size-5" />
-                        Crear mi menú digital
+                    <Button size="xl" className="w-full sm:w-auto" asChild>
+                        <a href="https://app.buenity.com/auth/register">
+                            <Sparkles className="size-5" />
+                            Probar gratis
+                        </a>
                     </Button>
-                    <Button variant="outline" size="lg" className="w-full sm:w-auto">
-                        <QrCode className="size-5" />
-                        Ver ejemplo
+                    <Button variant="outline" size="lg" className="w-full sm:w-auto" asChild>
+                        <a href="https://app.buenity.com/starbucks">
+                            <QrCode className="size-5" />
+                            Ver ejemplo
+                        </a>
                     </Button>
                 </div>
             </section>

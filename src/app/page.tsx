@@ -7,10 +7,14 @@ import { HowItWorksSection } from "@/components/sections/HowItWorksSection";
 import { FutureSection } from "@/components/sections/FutureSection";
 import { CTASection } from "@/components/sections/CTASection";
 import { TruthSection } from "@/components/sections/TruthSection";
+import { BackgroundGradientAnimation } from "@/components/ui/background-gradient-animation";
 
 export default function Home() {
   return (
-    <>
+    <BackgroundGradientAnimation
+      containerClassName="min-h-[90dvh]"
+      className="relative z-10"
+    >
       <HeroSection />
       <ProblemSection />
       <SolutionSection />
@@ -20,6 +24,6 @@ export default function Home() {
       <FutureSection />
       <CTASection />
       <TruthSection />
-    </>
+    </BackgroundGradientAnimation>
   );
 }
