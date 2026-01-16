@@ -13,7 +13,7 @@ export function HeroSection() {
             containerClassName="min-h-[85dvh]"
             className="relative z-10"
         >
-            <section className="relative mx-auto max-w-5xl w-full h-full flex flex-col items-center justify-center px-4 py-16 lg:py-14 text-center gap-10">
+            <section className="relative mx-auto max-w-5xl w-full h-full flex flex-col items-center justify-center px-4 py-12 lg:py-14 text-center gap-10">
                 <HeroHighlight className="w-full">
                     <div className="flex flex-col items-center justify-center gap-10">
                         <Title as="h1" size="h1" align="center" variant="default" className="relative z-10">
