@@ -1,6 +1,7 @@
-import { Card, CardContent } from "@/components/ui/card";
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Title } from "@/components/ui/title";
 import { Paragraph } from "@/components/ui/paragraph";
+import { Badge } from "@/components/ui/badge";
 import { X, FileText, Image, Palette, DollarSign } from "lucide-react";
 
 export function ProblemSection() {
@@ -34,8 +35,12 @@ export function ProblemSection() {
   ];
 
   return (
-    <section className="bg-muted py-20 px-4">
-      <div className="mx-auto max-w-6xl space-y-12">
+    <section className="bg-background py-15 px-6 md:px-4 relative overflow-hidden">
+      {/* Fondo decorativo sutil */}
+      <div className="absolute inset-0 bg-gradient-to-b from-secondary/5 via-transparent to-light-gray/30 pointer-events-none" />
+
+      <div className="mx-auto max-w-7xl space-y-16 relative z-10 flex flex-col items-center justify-center">
+        {/* Header */}
         <div className="text-center space-y-4">
           <Title as="h2" size="h2" align="center" variant="default">
             El problema real
@@ -48,39 +53,55 @@ export function ProblemSection() {
           </Paragraph>
         </div>
 
-        <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
+        {/* Problemas Grid */}
+        <div className="grid gap-6 items-center  sm:grid-cols-2 lg:grid-cols-4">
           {problems.map((problem, index) => {
             const Icon = problem.icon;
             return (
-              <Card key={index} className="border-destructive/20">
-                <CardContent className="pt-6">
-                  <div className="space-y-3">
-                    <div className="flex items-center gap-3">
-                      <div className="rounded-full bg-destructive/10 p-2">
-                        <Icon className="size-5 text-destructive" />
-                      </div>
-                      <h3 className="font-semibold text-primary-text">{problem.title}</h3>
+              <Card
+                key={index}
+                className="group border-2 border-destructive/20 hover:border-destructive/40 transition-all duration-300 hover:shadow-lg hover:-translate-y-1 bg-card/80 backdrop-blur-sm"
+              >
+                <CardHeader className="">
+                  <div className="flex items-start gap-4">
+                    <div className="rounded-xl bg-destructive/10 p-3 group-hover:bg-destructive/20 transition-colors duration-300">
+                      <Icon className="size-6 text-destructive" />
                     </div>
-                    <Paragraph size="sm" variant="secondary">{problem.description}</Paragraph>
+                    <CardTitle className="text-lg sm:text-base font-semibold text-primary-text leading-tight">
+                      {problem.title}
+                    </CardTitle>
                   </div>
+                </CardHeader>
+
+                <CardContent className="space-y-3">
+                  <Paragraph size="sm" variant="secondary">
+                    {problem.description}
+                  </Paragraph>
                 </CardContent>
               </Card>
             );
           })}
         </div>
 
-        <div className="rounded-lg border-2 border-destructive/30 bg-destructive/5 p-6">
-          <Paragraph size="base" align="center" weight="semibold" variant="primary" className="mb-4">
-            Eso se traduce en:
-          </Paragraph>
-          <ul className="flex flex-col items-center gap-3 sm:flex-row sm:justify-center">
-            {consequences.map((consequence, index) => (
-              <li key={index} className="flex items-center gap-2 text-secondary-text">
-                <X className="size-5 text-destructive" />
-                <span>{consequence}</span>
-              </li>
-            ))}
-          </ul>
+        {/* Consecuencias */}
+        <div className="relative">
+          <div className="rounded-2xl border-2 border-destructive/30 bg-gradient-to-br from-destructive/10 via-destructive/20 to-destructive/10 p-8 sm:p-10 backdrop-blur-sm">
+            <Title as="h4" size="h4" align="center" variant="default" className="mb-6">
+              Eso se traduce en:
+            </Title>
+            <div className="flex flex-wrap items-center justify-center gap-4">
+              {consequences.map((consequence, index) => (
+                <Badge
+                  key={index}
+                  variant="destructive"
+                  className="text-sm px-4 py-2.5 rounded-full border-2 bg-destructive/60 hover:bg-destructive/80 transition-all duration-300"
+                >
+                  <X className="size-4 mr-2" />
+                  {consequence}
+                </Badge>
+              ))}
+            </div>
+          </div>
         </div>
       </div>
     </section>

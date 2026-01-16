@@ -11,7 +11,7 @@ export function HeroSection() {
             containerClassName="min-h-[90dvh]"
             className="relative z-10"
         >
-            <section className="relative mx-auto max-w-5xl w-full flex h-full flex-col items-center justify-center px-4 py-17 lg:py-10 text-center gap-8">
+            <section className="relative mx-auto max-w-5xl w-full flex h-full flex-col items-center justify-center px-4 py-17 lg:py-12 text-center gap-8">
                 <div className="space-y-6">
                     <Title as="h1" size="h1" align="center" variant="default">
                         Tu restaurante merece algo mejor que una foto de WhatsApp
