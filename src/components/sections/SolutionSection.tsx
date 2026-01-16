@@ -1,7 +1,8 @@
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Title } from "@/components/ui/title";
 import { Paragraph } from "@/components/ui/paragraph";
-import { QrCode, Eye, Grid3x3, Camera, ShoppingCart, Palette, CheckCircle2 } from "lucide-react";
+import { Section } from "@/components/ui/section";
+import { QrCode, Eye, Grid3x3, Camera, ShoppingCart, Palette } from "lucide-react";
 
 export function SolutionSection() {
   const features = [
@@ -38,11 +39,8 @@ export function SolutionSection() {
   ];
 
   return (
-    <section className="bg-background py-16 px-4 md:px-6 relative overflow-hidden">
-      {/* Fondo decorativo sutil */}
-      <div className="absolute inset-0 bg-gradient-to-b from-primary/30 via-transparent to-tertiary/20 pointer-events-none" />
-
-      <div className="mx-auto max-w-7xl space-y-16 relative z-10 flex flex-col items-center justify-center">
+    <Section gradient="primary" containerClassName="max-w-7xl">
+      <div className="w-full space-y-16">
         {/* Header */}
         <div className="text-center space-y-6">
 
@@ -100,7 +98,7 @@ export function SolutionSection() {
           </div>
         </div>
       </div>
-    </section>
+    </Section>
   );
 }
 

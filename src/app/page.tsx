@@ -23,7 +23,6 @@ export default function Home() {
       <HowItWorksSection />
       <FutureSection />
       <CTASection />
-      <TruthSection />
     </BackgroundGradientAnimation>
   );
 }

@@ -2,6 +2,7 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Title } from "@/components/ui/title";
 import { Paragraph } from "@/components/ui/paragraph";
 import { Badge } from "@/components/ui/badge";
+import { Section } from "@/components/ui/section";
 import { X, FileText, Image, Palette, DollarSign } from "lucide-react";
 
 export function ProblemSection() {
@@ -35,11 +36,8 @@ export function ProblemSection() {
   ];
 
   return (
-    <section className="bg-background py-15 px-6 md:px-4 relative overflow-hidden">
-      {/* Fondo decorativo sutil */}
-      <div className="absolute inset-0 bg-gradient-to-b from-secondary/5 via-transparent to-light-gray/30 pointer-events-none" />
-
-      <div className="mx-auto max-w-7xl space-y-16 relative z-10 flex flex-col items-center justify-center">
+    <Section gradient="secondary" containerClassName="max-w-7xl">
+      <div className="w-full space-y-16">
         {/* Header */}
         <div className="text-center space-y-4">
           <Title as="h2" size="h2" align="center" variant="default">
@@ -104,7 +102,7 @@ export function ProblemSection() {
           </div>
         </div>
       </div>
-    </section>
+    </Section>
   );
 }
 
