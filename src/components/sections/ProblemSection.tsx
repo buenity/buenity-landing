@@ -37,7 +37,7 @@ export function ProblemSection() {
 
   return (
     <Section gradient="secondary" containerClassName="max-w-7xl">
-      <div className="w-full space-y-16">
+      <div className="w-full space-y-14">
         {/* Header */}
         <div className="text-center space-y-4">
           <Title as="h2" size="h2" align="center" variant="default">
@@ -58,10 +58,10 @@ export function ProblemSection() {
             return (
               <Card
                 key={index}
-                className="group border-2 border-destructive/20 hover:border-destructive/40 transition-all duration-300 hover:shadow-lg hover:-translate-y-1 bg-card/80 backdrop-blur-sm"
+                className="group border-2 border-destructive/20 hover:border-destructive/40 transition-all duration-300 hover:shadow-lg hover:-translate-y-1 bg-card/80 backdrop-blur-sm gap-3"
               >
                 <CardHeader className="">
-                  <div className="flex items-start gap-4">
+                  <div className="flex items-start gap-3">
                     <div className="rounded-xl bg-destructive/10 p-3 group-hover:bg-destructive/20 transition-colors duration-300">
                       <Icon className="size-6 text-destructive" />
                     </div>

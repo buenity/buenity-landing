@@ -31,16 +31,11 @@ export function SolutionSection() {
       title: "Pedir sin presión",
       description: "Experiencia fluida",
     },
-    {
-      icon: Palette,
-      title: "Con la identidad de tu marca",
-      description: "Logo, colores y estilo personalizado",
-    },
   ];
 
   return (
     <Section gradient="primary" containerClassName="max-w-7xl">
-      <div className="w-full space-y-16">
+      <div className="w-full space-y-14">
         {/* Header */}
         <div className="text-center space-y-6">
 
@@ -58,7 +53,7 @@ export function SolutionSection() {
         </div>
 
         {/* Features Grid */}
-        <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3 w-full items-center ">
+        <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-3 w-full items-center ">
           {features.map((feature, index) => {
             const Icon = feature.icon;
             return (
@@ -66,21 +61,20 @@ export function SolutionSection() {
                 key={index}
                 className="group border-2 border-primary/20 hover:border-primary/40 transition-all duration-300 hover:shadow-lg hover:-translate-y-1 bg-card/80 backdrop-blur-sm"
               >
-                <CardHeader className="">
+                <CardContent className="">
                   <div className="flex items-start gap-4">
                     <div className="rounded-xl bg-primary/60 p-3 group-hover:bg-primary/80 transition-colors duration-300">
                       <Icon className="size-6 text-secondary" />
                     </div>
-                    <CardTitle className="text-lg sm:text-base font-semibold text-primary-text leading-tight">
-                      {feature.title}
-                    </CardTitle>
+                    <div className="space-y-2">
+                      <CardTitle className="text-lg sm:text-base font-semibold text-primary-text leading-tight">
+                        {feature.title}
+                      </CardTitle>
+                      <Paragraph size="sm" variant="secondary" className="leading-relaxed">
+                        {feature.description}
+                      </Paragraph>
+                    </div>
                   </div>
-                </CardHeader>
-
-                <CardContent className="space-y-3">
-                  <Paragraph size="base" variant="secondary" className="leading-relaxed">
-                    {feature.description}
-                  </Paragraph>
                 </CardContent>
               </Card>
             );

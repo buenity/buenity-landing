@@ -13,11 +13,11 @@ export default function Home() {
       <HeroSection />
       <ProblemSection />
       <SolutionSection />
+      <HowItWorksSection />
       <BenefitsSection />
       <WhyBuenitySection />
-      <HowItWorksSection />
-      <FutureSection />
       <CTASection />
+      <FutureSection />
     </>
   );
 }

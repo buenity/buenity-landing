@@ -1,7 +1,7 @@
 import { Button } from "@/components/ui/button";
 import { Title } from "@/components/ui/title";
 import { Paragraph } from "@/components/ui/paragraph";
-import { QrCode, Sparkles } from "lucide-react";
+import { QrCode, Sparkles, PlayCircle } from "lucide-react";
 import { BackgroundGradientAnimation } from "@/components/ui/background-gradient-animation";
 import { HeroHighlight, Highlight } from "@/components/ui/hero-highlight";
 import { Resaltar } from "@/components/my/Resaltar";
@@ -44,9 +44,9 @@ export function HeroSection() {
                         </a>
                     </Button>
                     <Button variant="outline" size="lg" className="w-full sm:w-auto" asChild>
-                        <a href="https://app.buenity.com/starbucks">
-                            <QrCode className="size-5" />
-                            Ver ejemplo
+                        <a href="#como-funciona">
+                            <PlayCircle className="size-5" />
+                            Ver cómo funciona
                         </a>
                     </Button>
                 </div>
