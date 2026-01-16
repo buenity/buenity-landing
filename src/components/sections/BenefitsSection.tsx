@@ -119,8 +119,8 @@ export function BenefitsSection() {
                                                     <Image
                                                         src={benefit.image}
                                                         alt={benefit.title}
-                                                        width={1000}
-                                                        height={1000}
+                                                        width={600}
+                                                        height={600}
                                                         className="object-contain rounded-2xl opacity-90 group-hover:opacity-100 transition-opacity duration-500 max-w-[300px] md:max-w-[500px] lg:max-w-[600px] xl:max-w-none"
                                                     />
                                                 </div>
