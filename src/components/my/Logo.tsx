@@ -25,7 +25,7 @@ interface SizeMap {
 }
 
 const sizeMap: Record<LogoSize, SizeMap> = {
-  small: { width: 60, height: 45 },
+  small: { width: 80, height: 80 },
   default: { width: 120, height: 90 },
   large: { width: 180, height: 135 },
 };
@@ -77,11 +77,11 @@ const Logo: React.FC<LogoProps> = ({
       case 'pulse':
         return {
           initial: { opacity: 0, scale: 1 },
-          animate: { 
-            opacity: 1, 
+          animate: {
+            opacity: 1,
             scale: [1, 1.05, 1],
           },
-          transition: { 
+          transition: {
             duration: animationDuration,
             repeat: Infinity,
             repeatType: "reverse" as const,
@@ -91,11 +91,11 @@ const Logo: React.FC<LogoProps> = ({
       case 'bounce':
         return {
           initial: { opacity: 0, y: -20 },
-          animate: { 
-            opacity: 1, 
+          animate: {
+            opacity: 1,
             y: 0,
           },
-          transition: { 
+          transition: {
             duration: animationDuration,
             type: "spring",
             stiffness: 200,
@@ -105,11 +105,11 @@ const Logo: React.FC<LogoProps> = ({
       case 'rotate':
         return {
           initial: { opacity: 0, rotate: -180 },
-          animate: { 
-            opacity: 1, 
+          animate: {
+            opacity: 1,
             rotate: 0,
           },
-          transition: { 
+          transition: {
             duration: animationDuration,
             ease: "easeOut",
           },

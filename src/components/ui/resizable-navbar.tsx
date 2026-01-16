@@ -6,8 +6,9 @@ import {
   AnimatePresence,
   useScroll,
 } from "framer-motion";
-
+import Logo from "@/components/my/Logo";
 import React, { useRef, useState } from "react";
+
 
 
 interface NavbarProps {
@@ -71,7 +72,7 @@ export const Navbar = ({ children, className }: NavbarProps) => {
     <motion.div
       ref={ref}
       // IMPORTANT: Change this to class of `fixed` if you want the navbar to be fixed
-      className={cn("sticky inset-x-0 top-20 z-40 w-full", className)}
+      className={cn("sticky inset-x-0 top-2 z-40 w-full", className)}
     >
       {React.Children.map(children, (child) =>
         React.isValidElement(child)
@@ -238,8 +239,7 @@ export const NavbarLogo = () => {
       href="#"
       className="relative z-20 mr-4 flex items-center space-x-2 px-2 py-1 text-sm font-normal text-secondary"
     >
-      <span className="text-2xl font-bold text-primary">B</span>
-      <span className="font-semibold text-secondary text-lg">Buenity</span>
+      <Logo size="small" variant="whiteNoBg" />
     </a>
   );
 };

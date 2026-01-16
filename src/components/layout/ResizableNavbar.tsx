@@ -11,6 +11,7 @@ import {
     MobileNavMenu,
 } from "@/components/ui/resizable-navbar";
 import { useState } from "react";
+import Logo from "@/components/my/Logo";
 
 export function BuenityNavbar() {
     const navItems = [
