@@ -19,7 +19,7 @@ const ctaVariants = cva(
                 minimal: "flex flex-col items-center gap-4 p-6",
             },
             variant: {
-                primary: "bg-primary/10 border-primary/20 hover:border-primary/40 hover:shadow-xl",
+                primary: "bg-primary/30 border-primary/70 hover:border-primary/90 hover:shadow-xl",
                 secondary: "bg-secondary/10 border-secondary/20 hover:border-secondary/40 hover:shadow-xl",
                 gradient: "bg-gradient-to-br from-primary/20 via-primary/10 to-transparent border-primary/30 hover:border-primary/50 hover:shadow-2xl",
                 outline: "bg-card/50 backdrop-blur-sm border-primary/30 hover:bg-card/80 hover:border-primary/50 hover:shadow-lg",

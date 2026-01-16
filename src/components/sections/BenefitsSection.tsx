@@ -19,7 +19,7 @@ export function BenefitsSection() {
             gradient: "from-primary/20 to-primary/5",
             isFeatured: true,
             hasImage: true,
-            image: "/logo.png",
+            image: "/beneficio1.png",
         },
         {
             icon: Smartphone,
@@ -47,7 +47,7 @@ export function BenefitsSection() {
             gradient: "from-primary/25 to-primary/5",
             isFeatured: true,
             hasImage: true,
-            image: "/logo.png",
+            image: "/beneficio.png",
         },
     ];
 
@@ -119,8 +119,8 @@ export function BenefitsSection() {
                                                     <Image
                                                         src={benefit.image}
                                                         alt={benefit.title}
-                                                        width={500}
-                                                        height={500}
+                                                        width={1000}
+                                                        height={1000}
                                                         className="object-contain rounded-2xl opacity-90 group-hover:opacity-100 transition-opacity duration-500 max-w-[300px] md:max-w-[500px] lg:max-w-[600px] xl:max-w-none"
                                                     />
                                                 </div>

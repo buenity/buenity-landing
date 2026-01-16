@@ -31,7 +31,7 @@ export function Section({
         <section
             id={id}
             className={cn(
-                "bg-background py-16 md:py-24 px-4 md:px-6 relative overflow-hidden",
+                "bg-background py-16 md:py-20 px-4 md:px-6 relative overflow-hidden",
                 className
             )}
         >

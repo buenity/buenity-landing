@@ -1,27 +1,22 @@
-import { Button } from "@/components/ui/button";
-import { Title } from "@/components/ui/title";
-import { Paragraph } from "@/components/ui/paragraph";
+import { CTA } from "@/components/ui/cta";
 import { Sparkles } from "lucide-react";
 
 export function CTASection() {
   return (
-    <section className="bg-primary py-20 px-4">
-      <div className="mx-auto max-w-3xl space-y-8 text-center">
-        <div className="space-y-4">
-          <Title as="h2" size="h2" align="center" variant="secondary">
-            Tu restaurante no puede verse como uno más
-          </Title>
-          <Paragraph size="base" align="center" variant="secondary" className="opacity-90">
-            Empieza por lo básico:
-            <br />
-            <span className="font-semibold">un menú digital que sí da buena impresión.</span>
-          </Paragraph>
-        </div>
-
-        <Button size="lg" variant="secondary" className="w-full sm:w-auto text-white">
-          <Sparkles className="size-5" />
-          Crear mi menú digital ahora
-        </Button>
+    <section className="bg-primary/10 py-14 px-4">
+      <div className="mx-auto max-w-4xl">
+        <CTA
+          layout="centered"
+          variant="primary"
+          size="lg"
+          title="Tu restaurante no puede verse como uno más"
+          description="Empieza por lo básico: un menú digital que sí da buena impresión."
+          primaryAction={{
+            label: "Crear mi menú digital ahora",
+            href: "https://app.buenity.com/auth/register",
+            icon: <Sparkles className="size-5" />,
+          }}
+        />
       </div>
     </section>
   );

@@ -72,7 +72,7 @@ export const Navbar = ({ children, className }: NavbarProps) => {
     <motion.div
       ref={ref}
       // IMPORTANT: Change this to class of `fixed` if you want the navbar to be fixed
-      className={cn("sticky inset-x-0 top-1 z-40 w-full", className)}
+      className={cn("sticky inset-x-0 top-0 z-40 w-full", className)}
     >
       {React.Children.map(children, (child) =>
         React.isValidElement(child)
@@ -160,7 +160,7 @@ export const MobileNav = ({ children, className, visible }: MobileNavProps) => {
         paddingRight: visible ? "14px" : "14px",
         paddingLeft: visible ? "14px" : "14px",
         borderRadius: visible ? "14px" : "2rem",
-        y: visible ? 20 : 0,
+        y: visible ? 7 : 0,
       }}
       transition={{
         type: "spring",
@@ -168,7 +168,7 @@ export const MobileNav = ({ children, className, visible }: MobileNavProps) => {
         damping: 50,
       }}
       className={cn(
-        "relative z-50 mx-auto flex w-full flex-col items-center justify-between bg-tertiary px-0 py-2 lg:hidden",
+        "relative z-50 mx-auto flex w-full flex-col items-center justify-between bg-tertiary px-0 lg:hidden",
         visible && "bg-white/80 dark:bg-neutral-950/80",
         className,
       )}

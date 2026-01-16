@@ -11,7 +11,7 @@ const paragraphVariants = cva(
             variant: {
                 default: "text-secondary-text",
                 primary: "text-primary-text",
-                secondary: "text-secondary-text",
+                secondary: "text-secondary",
                 tertiary: "text-tertiary-text",
                 muted: "text-muted-text",
                 inverse: "text-inverse-text",
