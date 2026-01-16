@@ -83,7 +83,7 @@ export function ProblemSection() {
 
         {/* Consecuencias */}
         <div className="relative">
-          <div className="rounded-2xl border-2 border-destructive/30 bg-gradient-to-br from-destructive/10 via-destructive/20 to-destructive/10 p-8 sm:p-10 backdrop-blur-sm">
+          <div className="rounded-2xl border-2 border-destructive/30 bg-gradient-to-br from-destructive/10 via-destructive/20 to-destructive/10 p-6 sm:p-10 backdrop-blur-sm">
             <Title as="h4" size="h4" align="center" variant="default" className="mb-6">
               Eso se traduce en:
             </Title>

@@ -26,7 +26,7 @@ export function HeroSection() {
                         </Paragraph>
                         <Paragraph size="base" align="center" variant="secondary" className="mx-auto max-w-2xl">
                             <Resaltar>Con Buenity</Resaltar>, tus clientes escanean un <Resaltar>QR</Resaltar> y ven tu menú en una página moderna, rápida y clara.
-                            <br />  <br />
+                            <br />
                             <span className="font-bold">
                                 Sin <Resaltar>Canva</Resaltar>. Sin <Resaltar>PDFs borrosos</Resaltar>. Sin <Resaltar>links feos</Resaltar>.
                             </span>
@@ -37,7 +37,7 @@ export function HeroSection() {
 
 
                 <div className="flex flex-col items-center justify-center gap-4 sm:flex-row">
-                    <Button size="xl" className="w-full sm:w-auto" asChild>
+                    <Button size="xl" className="min-w-64" asChild>
                         <a href="https://app.buenity.com/auth/register">
                             <Sparkles className="size-5" />
                             Probar gratis
