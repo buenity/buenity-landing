@@ -1,8 +1,16 @@
 "use client";
 import { cn } from "@/lib/utils";
 import React, { useEffect, useRef, useState } from "react";
-import { createNoise3D } from "simplex-noise";
 import { BRAND_COLORS } from "@/constants/theme/theme";
+
+// Simple noise function replacement
+const createNoise3D = () => {
+  return (x: number, y: number, z: number) => {
+    // Simple pseudo-random function for noise
+    const n = Math.sin(x * 12.9898 + y * 78.233 + z * 43.1234) * 43758.5453;
+    return (n - Math.floor(n)) * 2 - 1; // Normalize to -1 to 1
+  };
+};
 
 export const WavyBackground = ({
   children,
@@ -105,8 +113,8 @@ export const WavyBackground = ({
     // I'm sorry but i have got to support it on safari.
     setIsSafari(
       typeof window !== "undefined" &&
-        navigator.userAgent.includes("Safari") &&
-        !navigator.userAgent.includes("Chrome")
+      navigator.userAgent.includes("Safari") &&
+      !navigator.userAgent.includes("Chrome")
     );
   }, []);
 
